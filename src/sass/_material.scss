@@ -1,0 +1,26 @@
+.content{
+
+    // ============================== MAT-CARD
+    mat-card{
+        margin-top: 20px;
+    }
+
+
+    // ============================== MAT-ACCORDION
+    mat-accordion{
+        margin-top: 20px;
+    }
+
+    mat-expansion-panel{
+        //margin-top: 20px;
+    }
+
+
+    // ============================== MAT-ACCORDION
+    .mat-raised-button:not([class*=mat-elevation-z]){
+        box-shadow:none;
+    }
+    
+}
+
+
