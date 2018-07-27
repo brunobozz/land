@@ -19,7 +19,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { InicialAComponent } from './comp/inicial-a/inicial-a.component';
-import { SobreAComponent } from './comp/sobre-a/sobre-a.component';
+import { SobreComponent } from './comp/sobre/sobre.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -37,7 +37,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     TestesComponent,
     ParallaxAreaComponent,
     InicialAComponent,
-    SobreAComponent
+    SobreComponent
   ],
   imports: [
     BrowserAnimationsModule,

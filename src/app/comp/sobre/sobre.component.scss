@@ -1,0 +1,20 @@
+#sobre{
+    background-color: #fff;
+
+    h1{
+        margin-bottom: 20px;
+    }
+
+    .sobre__logo{
+        height: 220px;
+        margin-bottom: 20px;
+    }
+    .sobre__logo--left{
+        margin-right: 20px;
+        float: left;
+    }
+    .sobre__logo--right{
+        margin-left: 20px;
+        float: right;
+    }
+}
