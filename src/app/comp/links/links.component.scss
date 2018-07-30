@@ -1,0 +1,20 @@
+#links{
+    .alinha{
+        padding-top: 0;
+    }
+    .links__item{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        .mat-icon{
+            font-size: 50px;
+            width: auto;
+            height: auto;
+        }
+        span{
+            display: block;
+            text-align: center;
+            font-size: 30px;
+        }
+    }
+}
