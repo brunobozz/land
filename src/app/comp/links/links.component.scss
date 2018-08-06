@@ -6,15 +6,23 @@
         display: block;
         text-align: center;
         text-decoration: none;
-        .mat-icon{
+        color: #c79739;
+        padding: 20px;
+        transition: all .2s ease-in-out;
+        i{
             font-size: 50px;
             width: auto;
             height: auto;
+            
         }
         span{
             display: block;
             text-align: center;
             font-size: 30px;
         }
+    }
+    .links__item:hover{
+        background-color: #c79739;
+        color: #fff;
     }
 }

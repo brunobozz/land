@@ -1,9 +1,71 @@
 <div class="topo">
-  <img routerLink="home" class="topo__logo" src="./assets/images/logo.jpg" />
+  <img class="topo__logo" (click)="vaiMenu('inicial-a')" src="./assets/images/logo_sobre.png" />
 
   <div class="topo__actions">
-    <button routerLink="perfil" mat-icon-button color="primary">
-      <mat-icon aria-label="">person</mat-icon>
+    <div class="topo__actions__buttons justDesk">
+      <button mat-button (click)="vaiMenu('sobre')">
+        <span class="langENG">About</span>
+        <span class="langPOR">Sobre</span>
+        <span class="langESP">Quin Somos</span>
+      </button>
+      <button mat-button (click)="vaiMenu('mapa')">
+        <span class="langENG"> Location</span>
+        <span class="langPOR"> Localização</span>
+        <span class="langESP"> Ubicación</span>
+      </button>
+      <button mat-button (click)="vaiMenu('contato')">
+          <span class="langENG"> Contact</span>
+          <span class="langPOR"> Contato</span>
+          <span class="langESP"> Contacto</span>
+        </button>
+    </div>
+
+
+    <button mat-icon-button [matMenuTriggerFor]="lang" matTooltip="sdvgsd">
+      <span class="flag-icon flag-icon-us flag-icon-squared langENG"></span>
+      <span class="flag-icon flag-icon-br flag-icon-squared langPOR"></span>
+      <span class="flag-icon flag-icon-es flag-icon-squared langESP"></span>
     </button>
+    <mat-menu #lang="matMenu" class="topo__actions_languages">
+      <button mat-menu-item (click)="trocaIdioma('ENG')">
+        <span class="flag-icon flag-icon-squared flag-icon-us"></span>
+        <span class="langENG"> English</span>
+        <span class="langPOR"> Inglês</span>
+        <span class="langESP"> Inglés</span>
+      </button>
+      <button mat-menu-item (click)="trocaIdioma('ESP')">
+        <span class="flag-icon flag-icon-squared flag-icon-es"></span>
+        <span class="langENG"> Spanish</span>
+        <span class="langPOR"> Espanhol</span>
+        <span class="langESP"> Español</span>
+      </button>
+      <button mat-menu-item (click)="trocaIdioma('POR')">
+        <span class="flag-icon flag-icon-squared flag-icon-br"></span>
+        <span class="langENG"> Portuguese</span>
+        <span class="langPOR"> Português</span>
+        <span class="langESP"> Portugués</span>
+      </button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="justMob">
+      <mat-icon aria-label="">view_headline</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="vaiMenu('sobre')">
+        <span class="langENG"> About</span>
+        <span class="langPOR"> Sobre</span>
+        <span class="langESP"> Quien Somos</span>
+      </button>
+      <button mat-menu-item (click)="vaiMenu('mapa')">
+        <span class="langENG"> Location</span>
+        <span class="langPOR"> Localização</span>
+        <span class="langESP"> Ubicación</span>
+      </button>
+      <button mat-menu-item (click)="vaiMenu('contato')">
+        <span class="langENG"> Contact</span>
+        <span class="langPOR"> Contato</span>
+        <span class="langESP"> Contacto</span>
+      </button>
+    </mat-menu>
   </div>
 </div>

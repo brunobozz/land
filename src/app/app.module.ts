@@ -1,5 +1,5 @@
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 //base libraries
 import { MaterialModule } from './material.module';
@@ -9,6 +9,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { ParallaxScrollModule } from 'ng2-parallaxscroll';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 //routing
 import { AppRoutingModule } from './/app-routing.module';
@@ -44,7 +45,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppRoutingModule,
     PerfectScrollbarModule,
     HomeModule,
-    ParallaxScrollModule
+    ParallaxScrollModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [
     {
@@ -57,6 +59,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }
     
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }

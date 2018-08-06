@@ -1,6 +1,6 @@
 .topo{
     
-    height: 50px;
+    height: 60px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     background: rgba(0,0,0,0.5);
@@ -9,16 +9,36 @@
     z-index: 1;
 
     .topo__logo{
-        height: 100%;
+        height: 50px;
         float: left;
+        margin: 5px;
         cursor: pointer;
     }
 
     .topo__actions{
         float: right;
         height: 100%;
-        line-height: 50px;
+        line-height: 60px;
         padding-right: 7px;
+
+        .mat-button,
+        .mat-icon-button{
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            border-radius: 0;
+            display: block;
+            float: left;  
+        }
+
+        .mat-button:hover,
+        .mat-icon-button:hover{
+            background-color: #c79739;
+        }
+    }
+
+    .topo__actions__buttons{
+        float: left;
     }
 
 }
