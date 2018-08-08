@@ -9,28 +9,18 @@ export class ParallaxAreaComponent implements OnInit {
 
   constructor() { }
 
-
+  public objeto: any;
 
   ngOnInit() {
-
-    $('div.bg-parallax').each(function () {
-      var $obj = $(this);
-
-      $(window).scroll(function () {
-        var yPos = -($(window).scrollTop() / $obj.data('speed'));
-
-        var bgpos = '50% ' + yPos + 'px';
-
-        $obj.css('background-position', bgpos);
-
-      });
-    });
-
+    this.objeto = $('.parallax-area');
   }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    console.log('coco');
+    console.log(this.objeto);
+    var yPos = -($(window).scrollTop() / this.objeto.data('speed'))+40;
+    var bgpos = '50% ' + yPos + 'px';
+    this.objeto.css('background-position', bgpos);
   }
 
 }

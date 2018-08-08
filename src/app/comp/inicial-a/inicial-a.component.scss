@@ -1,8 +1,8 @@
 .inicial-a{
+    position: relative;
     height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
+    background-position: 50% 0;
+    background-repeat: repeat;
     background-attachment: fixed;
 
     @keyframes logo {
@@ -12,11 +12,13 @@
 
     .logo{
         height: 400px;
+        max-height: calc(100vh - 100px);
         width: 500px;
         max-width: 90%;
         position: absolute;
         top: 50vh;
         left: 50%;
+        margin-top: 30px;
         transform: translate(-50%, -50%)!important;
         animation: logo 2s ease-in-out;
 

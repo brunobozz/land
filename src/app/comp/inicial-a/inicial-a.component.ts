@@ -9,21 +9,28 @@ export class InicialAComponent implements OnInit {
 
   constructor() { }
 
+  public objeto: any;
+
   ngOnInit() {
+    this.objeto = $('.inicial-a');
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
+  @HostListener('window:scroll', [])
+  onScroll() {
     //============================ SOME LOGO =================
     var siteAltura = $(document).scrollTop();
-    console.log(siteAltura);
     if (siteAltura >= 0 && siteAltura < 300) {
       $('.logo').css('opacity', 1 - siteAltura / 3 * 0.01);
-      console.log('ta no 1');
     } else {
       $('.logo').css('opacity', 0);
-      console.log('ta no 2');
     }
-    }
+
+
+    console.log(this.objeto);
+    var yPos = -($(window).scrollTop() / this.objeto.data('speed'));
+    var bgpos = '50% ' + yPos + 'px';
+    this.objeto.css('background-position', bgpos);
+    
+  }
 
 }
