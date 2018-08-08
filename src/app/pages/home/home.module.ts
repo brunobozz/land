@@ -1,3 +1,5 @@
+import { CalendarComponent } from 'ap-angular-fullcalendar';
+import { AgendaComponent } from './../../comp/agenda/agenda.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
@@ -26,7 +28,9 @@ import { EquipeComponent } from '../../comp/equipe/equipe.component';
     RodapeComponent,
     ContatoComponent,
     RodapeComponent,
-    EquipeComponent
+    EquipeComponent,
+    AgendaComponent,
+    CalendarComponent
   ]
 })
 export class HomeModule { }
