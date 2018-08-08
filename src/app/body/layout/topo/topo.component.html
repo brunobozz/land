@@ -2,6 +2,13 @@
   <img class="topo__logo" (click)="vaiMenu('inicial-a')" src="./assets/images/logo_sobre.png" />
 
   <div class="topo__actions">
+    
+    <button mat-icon-button [matMenuTriggerFor]="lang">
+      <span class="flag-icon flag-icon-us flag-icon-squared langENG"></span>
+      <span class="flag-icon flag-icon-br flag-icon-squared langPOR"></span>
+      <span class="flag-icon flag-icon-es flag-icon-squared langESP"></span>
+    </button>
+    
     <div class="topo__actions__buttons justDesk">
       <button mat-button (click)="vaiMenu('sobre')">
         <span class="langENG">About</span>
@@ -14,18 +21,12 @@
         <span class="langESP"> Ubicación</span>
       </button>
       <button mat-button (click)="vaiMenu('contato')">
-          <span class="langENG"> Contact</span>
-          <span class="langPOR"> Contato</span>
-          <span class="langESP"> Contacto</span>
-        </button>
+        <span class="langENG"> Contact</span>
+        <span class="langPOR"> Contato</span>
+        <span class="langESP"> Contacto</span>
+      </button>
     </div>
 
-
-    <button mat-icon-button [matMenuTriggerFor]="lang" matTooltip="sdvgsd">
-      <span class="flag-icon flag-icon-us flag-icon-squared langENG"></span>
-      <span class="flag-icon flag-icon-br flag-icon-squared langPOR"></span>
-      <span class="flag-icon flag-icon-es flag-icon-squared langESP"></span>
-    </button>
     <mat-menu #lang="matMenu" class="topo__actions_languages">
       <button mat-menu-item (click)="trocaIdioma('ENG')">
         <span class="flag-icon flag-icon-squared flag-icon-us"></span>
